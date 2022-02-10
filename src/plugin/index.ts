@@ -101,7 +101,7 @@ class AppiumDashboardPlugin extends BasePlugin {
       "appium:nativeWebScreenshot": true, //to make screenshot endpoint work in android webview tests,
     };
 
-    if (rawCapabilities?.["platformName"].toLowerCase() == "android") {
+    if (rawCapabilities?.["platformName"].toLowerCase() == "android" && !rawCapabilities?.["appium:mjpegServerPort"]) {
       newCapabilities["appium:mjpegServerPort"] = await getPort();
     }
 
