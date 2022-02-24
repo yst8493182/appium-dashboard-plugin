@@ -5,6 +5,8 @@ import {
   FaAngleUp,
   FaCheckCircle,
   FaFilter,
+  FaChevronDown,
+  FaChevronUp,
 } from "react-icons/fa";
 import { FcAndroidOs } from "react-icons/fc";
 import { FaApple, FaTrash, FaPlay, FaChrome } from "react-icons/fa";
@@ -154,6 +156,12 @@ export default function Icon(props: IconProps) {
       break;
     case "code":
       icon = <BsFileCode />;
+      break;
+    case "chevron-up":
+      icon = <FaChevronUp />;
+      break;
+    case "chevron-down":
+      icon = <FaChevronDown />;
       break;
     default:
       icon = null;
